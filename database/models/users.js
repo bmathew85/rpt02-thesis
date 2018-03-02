@@ -64,6 +64,7 @@ module.exports.createUser = function(userProps, callback){
               salt: salt,
               hash: hash
           })
+
           newUser.save()
 
       });
@@ -73,6 +74,8 @@ module.exports.createUser = function(userProps, callback){
 module.exports.getUserByUsername = function(username, callback){
   console.log("getusername"  + username)
   var query = {username: username};
+
+  console.log(User.find(query))
 
   return User.findOne(query);
 }
@@ -84,13 +87,30 @@ module.exports.checkUser = function(userCredentials){
     //exists = true sends them to userhome
     //one received user object, pass into bcrypt(hash & salt)
 
-  bcrypt.compare({userCredentials}, hash, function(err, res) {
+
+
+      console.log("Req Body from post:" +  JSON.stringify(userCredentials))
+
+
+      User.getUserByUsername(userCredentials.username)
+
+
+
+
+      username = User.getUserByUsername(userCredentials.username),
+      salt = userCredentials.salt,
+      hash = userCredentials.hash
+
+  bcrypt.compare(salt, hash, function(err, res) {
       // res == true
+      // console.log(res.userCredentials)
+      console.log("TRUE USER credentials")
+
   });
 
-  bcrypt.compare(someOtherPlaintextPassword, hash, function(err, res) {
-      // res == false
-  });
+  // bcrypt.compare(someOtherPlaintextPassword, hash, function(err, res) {
+  //     // res == false
+  // });
 }
 
 module.exports.getUserById = function(id, callback){
@@ -98,6 +118,7 @@ module.exports.getUserById = function(id, callback){
 }
 
 module.exports.comparePassword = function(candidatePassword, hash, callback){
+  console.log("Compare Password Func")
   bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
       if(err) throw err;
       callback(null, isMatch);

@@ -68,6 +68,8 @@ userRouter.post('/login',
   function(req, res) {
     console.log("REACHING THE LOGIN");
 
+    User.checkUser(req.body )
+
     res.redirect('/');
 });
 

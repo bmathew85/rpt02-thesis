@@ -43,6 +43,9 @@ class SignupForm extends Component {
     this.setState({ name: '', email: '', username: '', password: '', password2:'' })
   }
 
+  // fetchUser () {
+  //   .get('/')
+  // }
 
 
 	render(){
