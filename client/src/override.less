@@ -1,0 +1,276 @@
+/* input-moment calendar-less css*/
+// *, *:before, *:after {
+//   box-sizing: border-box;
+// }
+
+// body {
+//   margin: 0;
+//   font: 87.5%/1.5em 'Lato', sans-serif;
+// }
+
+// .app {
+//   max-width: 400px;
+//   margin: 0 auto;
+//   margin-top: 90px;
+//   padding: 0 20px;
+
+//   .input {
+//     margin-bottom: 20px;
+//   }
+
+//   input {
+//     padding: 7px 8px;
+//     font-size: 14px;
+//     width: 100%;
+//   }
+// }
+
+// @import 'variables';
+// .m-calendar {
+//   display: inline-block;
+//   table {
+//     width: 100%;
+//     border-collapse: collapse;
+//     border-spacing: 0;
+//     table-layout: fixed;
+//   }
+//   td {
+//     padding: 8px 0;
+//     text-align: center;
+//     cursor: pointer;
+//     color: @color-gray;
+//     border: 1px solid @color-gray;
+//   }
+//   thead {
+//     td {
+//       color: @color-blue;
+//       font-size: 11px;
+//       font-weight: 700;
+//       text-transform: uppercase;
+//       font-size: 12px;
+//     }
+//   }
+//   tbody td {
+//     color: #666666;
+//     &:hover {
+//       background: @color-blue;
+//       border-color: @color-blue;
+//       color: @color-white;
+//     }
+//   }
+//   .current-day {
+//     color: @color-blue;
+//     font-weight: bold;
+//   }
+//   .prev-month,
+//   .next-month {
+//     color: #999999;
+//   }
+//   .toolbar {
+//     line-height: 30px;
+//     color: @color-blue;
+//     text-align: center;
+//     margin-bottom: 13px;
+//     button {
+//       position: relative;
+//       width: 30px;
+//       height: 30px;
+//       line-height: 30px;
+//       color: #ffffff;
+//       border: 1px solid @color-blue;
+//       border-radius: 50%;
+//       background: @color-blue;
+//       font-size: 20px;
+//       padding: 0;
+//       text-align: center;
+//       outline: 0;
+//       z-index: 5;
+//       cursor: pointer;
+//     }
+//     .prev-month {
+//       float: left;
+//     }
+//     .next-month {
+//       float: right;
+//     }
+//     .current-date {
+//       color: @color-blue;
+//     }
+//   }
+// }
+
+// /* input-moment input.moment.less css*/
+// @import 'variables';
+// @import 'calendar';
+// @import 'time';
+// @import 'slider';
+// .im-btn {
+//   display: inline-block;
+//   background-color: #ffffff;
+//   border: 0;
+//   outline: 0;
+//   cursor: pointer;
+//   line-height: 1;
+//   &:before {
+//     margin-right: 6px;
+//   }
+// }
+
+// .m-input-moment {
+//   display: inline-block;
+//   width: 330px;
+//   padding: 12px 15px;
+//   border-radius: 3px;
+//   border: 1px solid @color-gray;
+//   .options {
+//     width: 100%;
+//     display: inline-block;
+//     margin-bottom: 4px;
+//     button {
+//       float: left;
+//       width: 50%;
+//       color: @color-blue;
+//       text-align: center;
+//       font-size: 16px;
+//       padding: 7px;
+//       border: 1px solid @color-blue;
+//       border-radius: 3px;
+//       &:first-child {
+//         border-top-right-radius: 0;
+//         border-bottom-right-radius: 0;
+//       }
+//       &:last-child {
+//         border-top-left-radius: 0;
+//         border-bottom-left-radius: 0;
+//       }
+//       &.is-active {
+//         color: #ffffff;
+//         background-color: @color-blue;
+//       }
+//     }
+//   }
+//   .tab {
+//     display: none;
+//     height: 310px;
+//     &.is-active {
+//       display: block;
+//     }
+//   }
+//   .tabs {
+//     margin-bottom: 11px;
+//   }
+//   .btn-save {
+//     display: block;
+//     margin-top: 10px;
+//     width: 100%;
+//     background-color: @color-blue;
+//     padding: 12px 0;
+//     text-align: center;
+//     color: #ffffff;
+//     font-size: 16px;
+//     border-radius: 3px;
+//   }
+// }
+
+// /* input-moment slider.less css*/
+// @import 'variables';
+// .u-slider-time {
+//   position: relative;
+//   display: inline-block;
+//   background-color: @color-gray;
+//   border-radius: 3px;
+//   height: @slider-size;
+//   width: 100%;
+//   cursor: pointer;
+//   .value {
+//     position: absolute;
+//     background-color: @color-blue;
+//     border-radius: 3px;
+//     top: 0;
+//     height: 100%;
+//   }
+//   .handle {
+//     position: absolute;
+//     width: @slider-size;
+//     height: @slider-size;
+//     &:after {
+//       position: relative;
+//       display: block;
+//       content: '';
+//       top: -@slider-fix/2;
+//       left: -(@slider-size+@slider-fix)/2;
+//       width: @slider-size + @slider-fix;
+//       height: @slider-size + @slider-fix;
+//       background-color: #fff;
+//       border: 3px solid @color-blue;
+//       border-radius: 50%;
+//       cursor: pointer;
+//     }
+//   }
+// }
+
+// /* input-moment time.less css*/
+// @import 'variables';
+
+// .m-time {
+//   color: @color-white;
+//   padding-top: 50px;
+
+//   .showtime {
+//     text-align: center;
+//   }
+
+//   .separater {
+//     display: inline-block;
+//     font-size: 32px;
+//     font-weight: bold;
+//     color: @color-blue;
+//     width: 32px;
+//     height: 65px;
+//     line-height: 65px;
+//     text-align: center;
+//   }
+
+//   .time-text {
+//     position: relative;
+//     left: -10px;
+//     font-size: 15px;
+//     color: @color-blue;
+//     margin-top: 7px;
+//     margin-bottom: 10px;
+//   }
+
+//   .sliders {
+//     padding: 0 10px;
+//   }
+
+//   .time {
+//     width: 65px;
+//     height: 65px;
+//     display: inline-block;
+//     font-size: 38px;
+//     line-height: 65px;
+//     background-color: @color-blue;
+//     border-radius: 3px;
+//     text-align: center;
+//   }
+// }
+
+// /* input-moment variable.less css*/
+// @color-blue: #1385e5;
+// @color-gray: #dfe0e4;
+// @color-white: #ffffff;
+// @slider-handle-size: 20px;
+// @slider-size: 4px;
+// @slider-fix: 20px;
+
+
+// /* creat competitions form */
+// .ui.green.button {
+//   margin-top: 20px;
+//   height: 41px;
+// }
+
+// .ui.form .fields>.field {
+//   padding-right: 0;
+// }

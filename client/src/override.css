@@ -1,0 +1,12 @@
+/* creat competitions form */
+.ui.green.button {
+  margin-top: 20px;
+  height: 41px;
+}
+
+.ui.form .fields>.field {
+  padding-right: 0;
+}
+/* table {
+  background-color: blue;
+} */

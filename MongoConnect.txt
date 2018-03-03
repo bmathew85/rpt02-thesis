@@ -1,0 +1,17 @@
+URL to our DB: https://mlab.com/databases/competely/collections/competitionCategories?pageSize=100&q=&s=&f=&CSRF_TOKEN=807Q-O8BY-EEW2-EE4J-JH6R-2GZ3-QZB6-OLVE-CYIP-3RIR-28SD-3ECV-EETQ-G5XI-2HL6-VBQP
+
+DB
+User: competely
+Pass: Youcandoit
+
+User: crizzcoxx
+Pass: Youcandoit!
+
+Using MongoURI:
+mongodb://competely:Youcandoit@ds133796.mlab.com:33796/competely
+
+Terminal Command to Connect:
+1) type this into the console 1st: mongod
+2) open a new console tab/window and then also type this: mongo
+3) type this into the console that you opened the shell w/ mongo (step 2)
+   mongo ds133796.mlab.com:33796/competely -u competely -p Youcandoit

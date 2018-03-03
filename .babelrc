@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["env", {"modules": false}],
+    "react",
+    "jest"
+  ],
+  "env": {
+    "test": {
+      "presets": [["env"], "react"]
+    }
+  },
+  "plugins": [
+    "react-hot-loader/babel",
+    ["lodash", { "id": ["lodash", "semantic-ui-react"] }]
+  ]
+}

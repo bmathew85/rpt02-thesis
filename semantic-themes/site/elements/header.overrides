@@ -1,0 +1,37 @@
+/*******************************
+           Overrides
+*******************************/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+h1.ui.header,
+.ui.huge.header {
+  font-weight: normal;
+  color: white;
+}
+
+h2.ui.header,
+.ui.large.header {
+  font-weight: normal;
+  color: white;
+}
+
+h3.ui.header,
+.ui.large.header {
+  font-weight: normal;
+}
+
+h4.ui.header,
+.ui.large.header {
+  font-weight: normal;
+  font-size: 10;
+}
+
+div#header-home {
+  padding-left: 85%;
+}
+
+.landing-image {
+    background-image: url('https://static.pexels.com/photos/17840/pexels-photo.jpg') !important;
+    background-size: cover !important;
+}
