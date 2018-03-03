@@ -34,6 +34,8 @@ class LoginForm extends Component {
     	})
     	.then((response)=> {
     		console.log(response)
+        this.props.history.push("/userhome")
+
     	})
     	.catch((err)=> {
     		console.log(err)
