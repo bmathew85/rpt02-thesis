@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Form, Button, Popup } from 'semantic-ui-react'
+import { Button, Header, Icon, Modal, Statistic, Form, Popup } from 'semantic-ui-react'
 import * as V from 'victory'
 import moment from 'moment'
 import InputMoment from 'input-moment'
@@ -14,11 +14,20 @@ class CheckInForm extends Component {
       weight: this.props.weight,
       reps: this.props.reps,
       sets: this.props.sets,
+      open: false,
       handleChange: this.props.handleChange,
       handleCheckInCalChange: this.props.handleCheckInCalChange
     }
     this.renderFormInputs = this.renderFormInputs.bind(this)
+    this.checkSecs = this.checkSecs.bind(this)
     this.handleCheckInCalChange = this.handleCheckInCalChange.bind(this)
+  }
+
+  checkSecs () {
+    const { secs } = this.props
+    if (secs >= 60 || secs < 0) {
+      alert('Please Enter a Valid Input')
+    }
   }
 
   handleCheckInCalChange (m) {
@@ -205,6 +214,7 @@ class CheckInForm extends Component {
 
           {/* Input Fields */}
           {this.renderFormInputs()}
+          {this.checkSecs()}
 
           {/* Submit */}
           <Button primary>Add +</Button>

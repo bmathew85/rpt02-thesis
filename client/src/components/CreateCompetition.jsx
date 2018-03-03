@@ -7,6 +7,7 @@ import InputMoment from 'input-moment'
 
 const CreateCompetition = ({
   isHidden,
+  userId,
   compName,
   compCat,
   compStart,
@@ -37,7 +38,7 @@ const CreateCompetition = ({
       <Header className="plus icon" content="Create a Competition" />
       <Modal.Content>{console.log('fron props in create competition component', compName, compCat, compStart, compEnd, compStartClick, compEndClick, 'ishidden', isHidden)}
         <Form
-          onSubmit={competitionsSubmit.bind(null, compName, compCat, compStart, compEnd, isHidden)}
+          onSubmit={competitionsSubmit.bind(null, compName, compCat, compStart, compEnd, isHidden, userId)}
         >
           <Form.Group widths="equal">
             <Form.Input

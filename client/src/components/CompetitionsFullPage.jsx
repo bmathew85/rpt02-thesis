@@ -7,6 +7,7 @@ import MenuBar from './MenuBar.jsx'
 
 const CompetitionsFullPage = ({
   Data,
+  userId,
   isHidden,
   goals,
   compName,
@@ -37,6 +38,7 @@ const CompetitionsFullPage = ({
         <Statistic.Group widths="three">
           <CreateCompetition
             isHidden={isHidden}
+            userId={userId}
             compName={compName}
             compCat={compCat}
             compStart={compStart}

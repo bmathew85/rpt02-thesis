@@ -18,9 +18,6 @@ const CompetitionsFullPageList = ({ CompetitionsFp }) => {
           </Grid.Column>
         </Grid>
         <Grid.Column>
-          <CompetitionsFriendsRank />
-        </Grid.Column>
-        <Grid.Column>
           <Header size="large">Started On</Header>
           {moment(CompetitionsFp.competitions_start_date).format('MMMM DD YYYY')}
           <Header size="large">Ends On</Header>

@@ -13,6 +13,68 @@ class GoalForm extends Component {
     super(props)
 
     this.state = { categories: categoryData }
+    this.renderTargets = this.renderTargets.bind(this)
+  }
+
+  renderTargets () {
+    const { category } = this.props
+    if (category === 'Strength') {
+      return (
+        <Form.Group>
+          <Form.Input
+            width="3"
+            fluid
+            label="Weight"
+            name="weightTarget"
+            value={this.props.weightTarget}
+            onChange={this.props.handleChange}
+          />
+          <Form.Input
+            width="3"
+            fluid
+            label="Reps"
+            name="repTarget"
+            value={this.props.repTarget}
+            onChange={this.props.handleChange}
+          />
+        </Form.Group>
+      )
+    } else if (category === 'Cardio') {
+      return (
+        <Form.Group>
+          <Form.Input
+            width="3"
+            fluid
+            label="Minutes"
+            name="minTarget"
+            value={this.props.minTarget}
+            onChange={this.props.handleChange}
+          />
+          <Form.Input
+            width="3"
+            fluid
+            label="Seconds"
+            name="secsTarget"
+            value={this.props.secsTarget}
+            onChange={this.props.handleChange}
+          />
+        </Form.Group>
+      )
+    } else if (category === 'Habit') {
+      return (
+        <Form.Group>
+          <Form.Input
+            width="3"
+            fluid
+            label="Days"
+            name="daysTarget"
+            value={this.props.daysTarget}
+            onChange={this.props.handleChange}
+            placeholder="(e.g. 30 days)"
+          />
+        </Form.Group>
+      )
+    }
   }
 
   render () {
@@ -30,20 +92,10 @@ class GoalForm extends Component {
               onChange={this.props.handleChange}
               placeholder="(e.g. lose 10lbs.)"
             />
-            <Form.Input
-              width="3"
-              fluid
-              label="Target"
-              name="target"
-              value={this.props.target}
-              onChange={this.props.handleChange}
-              placeholder="(e.g. 175lbs.)"
-            />
           </Form.Group>
 
           {/* Dropdown */}
-          <Form.Group inline>
-            <label>Categories</label>
+          <Form.Group>
             <Dropdown
               onChange={this.props.handleDropDownChange}
               selection
@@ -53,6 +105,9 @@ class GoalForm extends Component {
               placeholder="Categories"
             />
           </Form.Group>
+
+          {/* Target Inputs */}
+          {this.renderTargets()}
 
           {/* Dates */}
           <Form.Group inline>

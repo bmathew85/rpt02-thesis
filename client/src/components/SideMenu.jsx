@@ -14,9 +14,9 @@ class SideMenu extends Component {
     return (
       <Menu style={{ width: 290 }} vertical>
         <Menu.Item>
-          <Menu.Header as={Link} to="/goals">Goals</Menu.Header>
+          <Menu.Header>History</Menu.Header>
           <Menu.Menu>
-            {this.props.goals.map(goal => (
+            {this.props.accomplishments.map(goal => (
               <Menu.Item
                 as={Link}
                 to={`/goal/${goal._id}`}
@@ -37,11 +37,6 @@ class SideMenu extends Component {
             Data={this.props.Data}
           />
         </Menu.Item>
-        <Link to="/trophies">
-          <Menu.Item>
-            <Menu.Header>Trophies</Menu.Header>
-          </Menu.Item>
-        </Link>
       </Menu>
     );
   }
