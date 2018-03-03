@@ -27,7 +27,6 @@ module.exports = {
         use: 'babel-loader',
         exclude: /node_modules/
       },
-      { test: /\.handlebars$/, loader: "handlebars-loader" },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.ttf$|\.eot$|\.svg$/,
         use: 'file-loader?name=[name].[ext]?[hash]'

@@ -6,10 +6,7 @@ import GoalForm from './GoalForm.jsx'
 
 const AddGoal = props => (
   <div>
-    <Button primary onClick={() => { props.show('large') }}>
-      <i className="plus icon" />
-          Add a Goal
-    </Button>
+    <Button primary circular icon="plus icon" onClick={() => { props.show('large') }} />
 
     <Modal open={props.open} onClose={props.close}>
       <Modal.Header>

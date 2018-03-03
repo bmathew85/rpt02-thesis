@@ -1,6 +1,11 @@
 URL to our DB: https://mlab.com/databases/competely/collections/competitionCategories?pageSize=100&q=&s=&f=&CSRF_TOKEN=807Q-O8BY-EEW2-EE4J-JH6R-2GZ3-QZB6-OLVE-CYIP-3RIR-28SD-3ECV-EETQ-G5XI-2HL6-VBQP
+
+DB
 User: competely
-Pass: Youcandoit1
+Pass: Youcandoit
+
+User: crizzcoxx
+Pass: Youcandoit!
 
 Using MongoURI:
 mongodb://competely:Youcandoit@ds133796.mlab.com:33796/competely

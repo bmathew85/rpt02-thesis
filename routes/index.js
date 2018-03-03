@@ -11,7 +11,7 @@ function ensureAuthenticated(req, res, next){
 		return next();
 	} else {
 		//req.flash('error_msg','You are not logged in');
-		res.redirect('/'); //was originally /users/login
+		res.redirect('/users/login'); //was originally /users/login
 	}
 }
 

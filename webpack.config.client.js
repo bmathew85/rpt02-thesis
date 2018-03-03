@@ -32,7 +32,6 @@ module.exports = {
           path.join(__dirname, 'client/src')
         ]
       },
-      { test: /\.handlebars$/, loader: "handlebars-loader" },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.ttf$|\.eot$|\.svg$/,
         use: 'file-loader?name=[name].[ext]?[hash]'
